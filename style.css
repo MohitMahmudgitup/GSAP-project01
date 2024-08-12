@@ -73,7 +73,7 @@ nav{
     padding: 3vw 5vw;
     z-index:10;
 }
-h3{
+nav h3{
     font-size: 1.2vw;
     font-weight: 400;
     cursor: pointer;
@@ -247,7 +247,8 @@ span{
 .page4{
     width: 100vw;
     height: 100vh;
-    background-color: rgb(0, 56, 56);
+    background-color: azure;
+
 }
 .page4-titel{
     /* padding: 3vw 5vw; */
@@ -257,9 +258,141 @@ span{
     align-items: end;
     /* background-color: rgb(0, 6, 56); */
     margin: auto;
+    z-index: 9;
     border-bottom: 1px solid black;
 }
 .page4-titel h1{
     font-size: 9vw;
     color: black;
+}
+/* swiper */
+
+.swiper {
+    width: 100%;
+    height: 100%;
+    margin-top: -200px;
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.swiper-slide{
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.swiper-slide img {
+    margin: 1px;
+    width: 19.5%;
+    z-index: 999;
+    object-fit: cover;
+  }
+
+
+
+
+/* Mobile */
+
+@media(max-width:1000px)
+{
+    .curser{
+        display: none;
+    }
+    .loader h3{
+        font-size: 4vw;
+        color: white;
+        margin-left: 5px;
+    }
+    /* page1-content */
+
+    nav h3{
+        font-size: 4.2vw;
+        font-weight: 400;
+        cursor: pointer;
+    }
+    .main-text{
+        height: 150px;
+        width: 100%;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index:10;
+        
+    }
+
+    /* page2-content */
+
+    .page2-content-text01{
+        font-size: 4.5vw;
+    }
+    .page2-content-box02{
+        width: 99vw;
+        height: 50vh;
+    }
+    .page2-content-text02{
+        font-size: 6.5vw;
+        font-weight: 400;
+        padding-top:15px ;
+        text-align: center;
+        
+    }
+
+    .title-span-01{
+        padding: 3px 9px;
+        font-size: 13px;
+    }
+    .page2-content-text04{
+        font-size: 35px;
+        font-weight: 400;
+        padding: 0vw 5vw;
+        text-align: center;
+        letter-spacing: -1px;
+        line-height: 1;
+        text-decoration-line:underline;
+        text-decoration-thickness: 1px;
+    }
+    .page2-content-box03{
+        width: 100%;
+        height: 100%;
+        justify-content: center
+    }
+    .card-box-main{
+    margin: 5px;
+    }
+
+/* page2-content-box04 */
+    .page2-content-text05{
+        font-size: 3.5vw;
+    }
+    .page2-content-box06{
+        width: 99vw;
+        height: 50vh;
+    }
+    .page2-content-text06{
+        font-size: 6.5vw;
+        font-weight: 400;
+        text-align: center;
+    }
+    .page3{
+        display: none;
+    }
+    .page4-titel h1{
+        font-size: 15vw;
+        color: black;
+    }
+    /* swiper */
+    .swiper {
+        width: 100%;
+        height: 100%;
+        /* background-color: blueviolet; */
+        margin-top: -15px;
+    }
+    .swiper-slide img {
+        margin: 2px;
+        width: 70px;
+      }
 }

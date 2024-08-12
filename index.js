@@ -30,31 +30,6 @@ ScrollTrigger.refresh();
 }
 locoScroll()
 
-// function loader() {
-//     let tl = gsap.timeline()
-//     .from(".loader h3",{
-//         x : 30,
-//         duration:1,
-//         opacity:0,
-//         stagger:.2,
-        
-//     })
-//     .to(".loader h3",{
-//         x : -30,
-//         duration:1,
-//         opacity:0,
-//         stagger:.2,
-//     })
-//     .to(".loader",{
-//         y : -1000,
-//         duration:1,
-//     })
-//     .to(".loader",{
-//         display:"none"
-//     })
-// }
-// loader()
-
 
 function curser(){
     let page1Content = document.querySelector(".page1-content")
@@ -106,15 +81,35 @@ function dispalytext (){
     h1text.map((e)=>{
         add += `<span>${e}</span>`
     })
-     h1.innerHTML = add
+     h1.innerHTML = add   
      let tl = gsap.timeline()
-.from("h1 span",{
-   y:100,
-   duration:.3,
-   stagger:.2,
-   opacity:0,
-
-})
+    .from(".loader h3",{
+        x : 30,
+        duration:1,
+        opacity:0,
+        stagger:.2,
+        
+    })
+    .to(".loader h3",{
+        x : -30,
+        duration:1,
+        opacity:0,
+        stagger:.2,
+    })
+    .to(".loader",{
+        y : -1000,
+        duration:1,
+    })
+    .to(".loader",{
+        display:"none"
+    })
+    .from("h1 span",{
+        y:100,
+        duration:.3,
+        stagger:.1,
+        opacity:0,
+    
+    })
 }
 dispalytext()
 
@@ -207,6 +202,25 @@ function bigTextScroller(){
     })
 }
 bigTextScroller()
+
+function swiper() {
+    var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        spaceBetween: 1,
+        loop: true,
+        centeredSlides: true,
+          autoplay: {
+            delay: 100,
+            disableOnInteraction: true,
+          },
+          speed: 50000,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+      });
+}
+swiper()
 
 
 
